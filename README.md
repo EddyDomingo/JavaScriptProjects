@@ -1,3 +1,2 @@
 # hello-world
-Learning GitHub
-I am learning github commit
+Javascript Projects from basic to intermediate. 
