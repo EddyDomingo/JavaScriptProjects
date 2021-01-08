@@ -1,103 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-         <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-        <title>Calculator Web App</title>
-        <style>
-            .button {
-                background-color: #000000;
-                border: none;
-                color: white;
-                padding: 20px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 24px;
-                margin: 4px 2px;
-                cursor: pointer;
-                padding: 16px;
-                border-radius: 12px;
-            }
+    <!--Required Meta Tag-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-            .buttonOrange {background-color: #FF7F50;}
-            .buttonPurple {background-color: #9932CC;}
-            .buttonBGreen {background-color: #008B8B;}
-            .buttonGreen {background-color: #006400;}
-            .buttonRed  {background-color: #DC143C;}
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <style>
+        .center {
+        text-align: center;
+        border: 3px solid green;
+    }
 
-            .grid-container {
-                    display: grid;
-                    grid-template-columns: auto auto auto auto;
-                    grid-gap: 10px;
-                    background-color: #FFFFFF;
-                    padding: 10px;
-                    height: 300px;
-                    width: 500px;
-                    
-            }
+    body {
+        font-family: Arial;
+        margin: 0;
+    }
 
-            .grid-container > div {
-                    background-color: rgba(255, 255, 255, 0.8);
-                    border: 1px solid black;
-                    text-align: center;
-                    font-size: 30px;
-            }
+    /* Header/Logo Title */
+    .header {
+        padding: 10px;
+        text-align: center;
+        background: #1abc9c;
+        color: white;
+        font-size: 20px;
+    }
+    </style>
+    <title>Student Report Card</title>
 
-            .display
-                {
-                background-color:#222;
-                width:475px;
-                position:relative;
-                left:15px;
-                top:20px;
-                height:50px;
-                }
-                .display input
-                {
-                position:relative;
-                left:2px;
-                top:2px;
-                width:470px;
-                height:46px;
-                color:black;
-                background-color:#ffffff;
-                font-size:21px;
-                text-align:right;
-            } 
-
-        </style>
     </head>
     <body>
+    <div class="header">
 
-        <div class="display"><input type="text" readonly size="18" id="d"></div>
-       <br>
-                <div class="grid-container">
-                    
-                    <button class="button" id="btn0" value="0">0</button>
-                    <button class="button" id="btn1" value="1">1</button>
-                    <button class="button" id="btn2" value="2">2</button>
-                    <button class="button buttonOrange" id="btn+" value="+">+</button>
-                    
-                    <button class="button" id="btn3" value="3">3</button>
-                    <button class="button" id="btn4" value="4">4</button>
-                    <button class="button" id="btn5" value="5">5</button>
-                    <button class="button buttonPurple" id="btn-" value="-">-</button>
-                    
-                    <button class="button" id="btn6" value="6">6</button>
-                    <button class="button" id="btn7" value="7">7</button>
-                    <button class="button" id="btn8" value="8">8</button>
-                    <button class="button buttonBGreen" id="btnx" value="*">*</button>
-                    
-                    <button class="button" id="btn9" value="9">9</button>
-                    <button class="button" id="btnc" value="C">C</button>
-                    <button class="button buttonRed" id="btnE" value="=">=</button>
-                    <button class="button buttonGreen" id="btn/" value="/">/ </button>
-                </div>
+        <br>
+        <h2>Welcome to the Student Report Card System</h2>
+        <br>
 
-                <script src="scripts.js"></script>   
+    </div>
 
+        <div class="container">
+            
+            <!-- Content here -->
+                <br>
+                <p>
+                    This site is designed to input students grades.
+                    Which will calculate the students GPA. 
+                    You will then be able to see the students grades and GPA.
+                </p>
+
+                <br>
+                <h3>Menu Options</h3>
+                <br>
+                <ol>
+                    <li><a href="input.html">Input new student and grades.</a></li>
+                    
+                    
+                </ol>
+              
+        </div>
+
+        <script src="scripts.js"></script>
     </body>
 </html>

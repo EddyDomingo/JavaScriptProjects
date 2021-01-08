@@ -1,39 +1,85 @@
-
-//Buttons with numbers
-document.getElementById("btn0").onclick = function(){v("0")}
-document.getElementById("btn1").onclick = function(){v("1")}
-document.getElementById("btn2").onclick = function(){v("2")}
-document.getElementById("btn3").onclick = function(){v("3")}
-document.getElementById("btn4").onclick = function(){v("4")}
-document.getElementById("btn5").onclick = function(){v("5")}
-document.getElementById("btn6").onclick = function(){v("6")}
-document.getElementById("btn7").onclick = function(){v("7")}
-document.getElementById("btn8").onclick = function(){v("8")}
-document.getElementById("btn9").onclick = function(){v("9")}
-
-//Buttons with symbols
-document.getElementById("btn+").onclick = function(){v("+")}
-document.getElementById("btn-").onclick = function(){v("-")}
-document.getElementById("btn/").onclick = function(){v("/")}
-document.getElementById("btnE").onclick = function(){e()}
-document.getElementById("btnc").onclick = function(){c("")}
-document.getElementById("btnx").onclick = function(){v("*")}
+document.getElementById("btn1").addEventListener("click", inputFunc)
+document.getElementById("btn2").addEventListener("click", displayFunc)
 
 
 
+var studentList = new Object()
 
-function c(val){
-    document.getElementById("d").value=val;
+function inputFunc(){
+
+    var fname = document.getElementById("name").value 
+    var email = document.getElementById("email").value
+    var math = document.getElementById("math").value
+    var eng = document.getElementById("eng").value
+    var sstd = document.getElementById("sstd").value
+
+    var x = Math.floor((Math.random() * 100) + 1);
+    var y = x.toString();
+    studentID = "student".concat(y)
+    
+    studentNumber = "student".concat(y)
+    
+    var studentID = new Object();
+    studentID.name = fname
+    studentID.email = email
+    studentID.math = math
+    studentID.eng = eng
+    studentID.sstd = sstd
+    
+    studentList[studentNumber] = studentID
+    console.log(studentList[studentNumber] = studentID)
+
+
 }
-function v(val){
-    document.getElementById("d").value+=val;
+
+function displayFunc(){
+
+
+    // variable of javascript object, place each element in a variable with stringfy
+    studentInformation = studentList[studentNumber]
+    
+    console.log(studentInformation)
+    var obj = String(studentInformation.name)
+    var obj1 = String(studentInformation.email)
+    var obj2 = String(studentInformation.math)
+    var obj3 = String(studentInformation.eng)
+    var obj4 = String(studentInformation.sstd)
+
+
+    var table = document.getElementById("myTable");
+    var row = table.insertRow(1);
+    var cell1 = row.insertCell(0)
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+    var cell4 = row.insertCell(3);
+    var cell5 = row.insertCell(4);
+    cell1.innerHTML = obj;
+    cell2.innerHTML = obj1;
+    cell3.innerHTML = obj2;
+    cell4.innerHTML = obj3;
+    cell5.innerHTML = obj4;
+
+
 }
-function e() { 
-    try 
-    { 
-        c(eval(document.getElementById("d").value)) 
-    } 
-    catch(e) {
-        c('Error') 
-    } 
-}  
+
+
+
+// Create a table dynamically
+
+    // var x = document.createElement("TABLE");
+    // x.setAttribute("id", "myTable");
+    // document.body.appendChild(x);
+  
+    // var table = document.getElementById("myTable");
+    // var row = table.insertRow(0);
+    // var cellx1 = row.insertCell(0)
+    // var cellx2 = row.insertCell(1);
+    // var cellx3 = row.insertCell(2);
+    // var cellx4 = row.insertCell(3);
+    // var cellx5 = row.insertCell(4);
+  
+    // cellx1.innerHTML = "Name";
+    // cellx2.innerHTML = "Email";
+    // cellx3.innerHTML = "Math Grade";
+    // cellx4.innerHTML = "English Grade";
+    // cellx5.innerHTML = "Social Studies Grade";
